@@ -163,11 +163,31 @@ CREATE TABLE `Rating`(
   `EffectivenessOfCare$id`            INT UNSIGNED NOT NULL,
   `TimelinessOfCare$id`               INT UNSIGNED NOT NULL,
   `EfficientUseOfMedicalImaging$id`   INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`Hospital$id`, `Mortality$id`, `SafetyOfCare$id`, `Readmission$id`,
-  `PatientExperience$id`, `EffectivenessOfCare$id`, `TimelinessOfCare$id`, `EfficientUseOfMedicalImaging$id`),
-  FOREIGN KEY (`Hospital$id`) REFERENCES `Hospital` (`id`),
-  
+  PRIMARY KEY                         (`Hospital$id`, `Mortality$id`, `SafetyOfCare$id`, `Readmission$id`, `PatientExperience$id`, `EffectivenessOfCare$id`, `TimelinessOfCare$id`, `EfficientUseOfMedicalImaging$id`),
+  FOREIGN KEY                         (`Hospital$id`) REFERENCES `Hospital` (`id`),
+  FOREIGN KEY                         (`Mortality$id`) REFERENCES `Mortality` (`NationalComparison$id`),
+  FOREIGN KEY                         (`SafetyOfCare$id`) REFERENCES `SafetyOfCare` (`NationalComparison$id`),
+  FOREIGN KEY                         (`Readmission$id`) REFERENCES `Readmission` (`NationalComparison$id`),
+  FOREIGN KEY                         (`PatientExperience$id`) REFERENCES `PatientExperience` (`NationalComparison$id`),
+  FOREIGN KEY                         (`EffectivenessOfCare$id`) REFERENCES `EffectivenessOfCare` (`NationalComparison$id`),
+  FOREIGN KEY                         (`TimelinessOfCare$id`) REFERENCES `TimelinessOfCare` (`NationalComparison$id`),
+  FOREIGN KEY                         (`EfficientUseOfMedicalImaging$id`) REFERENCES `EfficientUseOfMedicalImaging` (`NationalComparison$id`)
+);
 
+CREATE TABLE `WorksAt`(
+  `Hospital$id`   INT UNSIGNED NOT NULL,
+  `Employee$id`   INT UNSIGNED NOT NULL,
+  PRIMARY KEY     (`Hospital$id`, `Employee$id`),
+  FOREIGN KEY     (`Hospital$id`) REFERENCES `Hospital` (`id`),
+  FOREIGN KEY     (`Employee$id`) REFERENCES `Employee` (`id`)
+);
+
+CREATE TABLE `SupervisedBy`(
+  `Doctor$id`   INT UNSIGNED NOT NULL,
+  `Nurse$id`   INT UNSIGNED NOT NULL,
+  PRIMARY KEY     (`Doctor$id`, `Nurse$id`),
+  FOREIGN KEY     (`Doctor$id`) REFERENCES `Doctor` (`Employee$id`),
+  FOREIGN KEY     (`Nurse$id`) REFERENCES `Nurse` (`Employee$id`)
 );
 
 SHOW TABLES;
