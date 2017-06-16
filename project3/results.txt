@@ -1,0 +1,353 @@
+Eric Wolfe
+erwolfe@siue.edu
+
+# Tables
+
+city
+county
+doctor
+effectivenessofcare
+efficientuseofmedicalimaging
+employee
+footnote
+hospital
+hospitaloverallrating
+hospitalownership
+hospitaltype
+mortality
+nationalcomparison
+nurse
+patientexperience
+rating
+readmission
+safetyofcare
+specialty
+state
+supervisedby
+timelinessofcare
+worksat
+zipcode
+
+# DESCRIBE TABLES
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(100)    NO              NULL
+phoneNumber     varchar(10)     NO              NULL
+dateOfBirth     date    NO              NULL
+
+Field   Type    Null    Key     Default Extra
+Employee$id     int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+description     varchar(50)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+Employee$id     int(10) unsigned        NO      PRI     NULL
+Specialty$id    int(10) unsigned        NO      MUL     NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(50)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(25)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+code    int(10) unsigned        NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(50)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(50)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(50)     NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+rating  int(10) unsigned        NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+name    varchar(100)    NO              NULL
+phoneNumber     varchar(10)     NO              NULL
+address varchar(50)     NO              NULL
+xCoordinate     double  NO              NULL
+yCoordinate     double  NO              NULL
+ES      tinyint(1)      NO              NULL
+EHS     tinyint(1)      NO              NULL
+City$id int(10) unsigned        NO      MUL     NULL
+State$id        int(10) unsigned        NO      MUL     NULL
+Zipcode$id      int(10) unsigned        NO      MUL     NULL
+County$id       int(10) unsigned        NO      MUL     NULL
+HospitalType$id int(10) unsigned        NO      MUL     NULL
+HospitalOwnership$id    int(10) unsigned        NO      MUL     NULL
+HospitalOverallRating$id        int(10) unsigned        NO      MUL     NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+note    varchar(500)    NO              NULL
+
+Field   Type    Null    Key     Default Extra
+id      int(10) unsigned        NO      PRI     NULL    auto_increment
+description     varchar(100)    NO              NULL
+Footnote$id     int(10) unsigned        YES     MUL     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+NationalComparison$id   int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+Hospital$id     int(10) unsigned        NO      PRI     NULL
+Mortality$id    int(10) unsigned        NO      PRI     NULL
+SafetyOfCare$id int(10) unsigned        NO      PRI     NULL
+Readmission$id  int(10) unsigned        NO      PRI     NULL
+PatientExperience$id    int(10) unsigned        NO      PRI     NULL
+EffectivenessOfCare$id  int(10) unsigned        NO      PRI     NULL
+TimelinessOfCare$id     int(10) unsigned        NO      PRI     NULL
+EfficientUseOfMedicalImaging$id int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+Hospital$id     int(10) unsigned        NO      PRI     NULL
+Employee$id     int(10) unsigned        NO      PRI     NULL
+
+Field   Type    Null    Key     Default Extra
+Doctor$id       int(10) unsigned        NO      PRI     NULL
+Nurse$id        int(10) unsigned        NO      PRI     NULL
+
+# Input data
+
+id      name    phoneNumber     dateOfBirth
+1       Eric    0000000000      1994-12-24
+2       Tammy   0000000001      1994-12-25
+3       Bob     0000000002      1994-12-26
+4       Scott   0000000003      1994-12-27
+5       Jimmy   0000000004      1994-12-28
+6       Jose    0000000005      1994-12-29
+7       Cat     0000000006      1994-12-30
+8       Dog     0000000007      1994-12-31
+9       Jack    0000000008      1995-01-01
+10      Shandy  0000000009      1995-01-02
+
+Employee$id
+1
+2
+3
+4
+5
+
+id      description
+1       foot
+2       head
+3       heart
+4       immune
+5       nutritionist
+
+Employee$id     Specialty$id
+6       1
+7       2
+8       3
+9       4
+10      5
+
+id      name
+1       Dothan
+2       Boaz
+3       Florence
+4       Opp
+5       Luverne
+
+id      name
+1       AL
+2       AK
+3       AZ
+4       AR
+5       KY
+
+id      code
+1       36301
+2       35957
+3       35631
+4       36467
+5       36049
+
+id      name
+1       Houston
+2       Marshall
+3       Lauderdale
+4       Covington
+5       Crenshaw
+
+id      name
+1       Acute Care Hospitals
+2       Childs
+3       Critical Access Hospitals
+
+id      name
+1       Government - Hospital District or Authority
+2       Voluntary non-profit - Private
+3       Propietary
+4       Government - Local
+5       Government - State
+
+id      rating
+1       1
+2       2
+3       3
+4       4
+5       5
+
+id      name    phoneNumber     address xCoordinate     yCoordinate     ES      EHS     City$id State$id        Zipcode$id      County$id       HospitalType$id HospitalOwnership$id    HospitalOverallRating$id
+1       Southeast Alabama Medical Center        3347938701      1108 Ross Clark Circle  31.214058       -85.361725      1       1       1       1       1       1       1       1       3
+2       Marshall Medical Center South   2565938310      2505 US Highway 431 North       0       0       1       1       2       1       2       2       1       1       3
+3       Eliza Coffee Memorial Hospital  2567688400      205 Marengo Street      34.79366        -87.684348      1       1       3       1       3       3       1       1       2
+4       Mizell Memorial Hospital        3344933541      702 N Main St   31.291972       -86.255415      1       1       4       1       4       4       1       2       2
+5       Crenshaw Community Hospital     3343353374      101 Hospital Circle     31.692595       -86.266156      1       1       5       1       5       5       1       3       3
+
+id      note
+1       Results are not avaliable for this reporting period
+2       There are too few measures or measure groups reported to calculate a star rating or measure group score
+3       Data are shown only for hospital that participate in the Inpatient quality Reporting (IQR) and Outpatient Quality Reporting (OQR) programs
+4       This hospitals star rating only includes data reported on inpatient servies
+5       Not Avaliable
+
+id      description     Footnote$id
+1       Same as the national average    NULL
+2       Below the national average      NULL
+3       Below the national average      NULL
+4       Same as the national average    NULL
+5       Same as the national average    NULL
+6       Above the national average      NULL
+7       Same as the national average    NULL
+8       Same as the national average    NULL
+9       Not Avaliable   1
+10      Not Avaliable   1
+11      Same as the national average    NULL
+12      Above the national average      NULL
+13      Same as the national average    NULL
+14      Below the national average      NULL
+15      Same as the national average    NULL
+16      Below the national average      NULL
+17      Same as the national average    NULL
+18      Below the national average      NULL
+19      Same as the national average    NULL
+20      Not Avaliable   1
+21      Same as the national average    NULL
+22      Same as the national average    NULL
+23      Same as the national average    NULL
+24      Below the national average      NULL
+25      Same as the national average    NULL
+26      Same as the national average    NULL
+27      Above the national average      NULL
+28      Above the national average      NULL
+29      Above the national average      NULL
+30      Above the national average      NULL
+31      Same as the national average    NULL
+32      Below the national average      NULL
+33      Same as the national average    NULL
+34      Not Avaliable   1
+35      Not Avaliable   1
+
+NationalComparison$id
+1
+2
+3
+4
+5
+
+NationalComparison$id
+6
+7
+8
+9
+10
+
+NationalComparison$id
+11
+12
+13
+14
+15
+
+NationalComparison$id
+16
+17
+18
+19
+20
+
+NationalComparison$id
+21
+22
+23
+24
+25
+
+NationalComparison$id
+26
+27
+28
+29
+30
+
+NationalComparison$id
+31
+32
+33
+34
+35
+
+Hospital$id     Mortality$id    SafetyOfCare$id Readmission$id  PatientExperience$id    EffectivenessOfCare$id  TimelinessOfCare$id     EfficientUseOfMedicalImaging$id
+1       1       6       11      16      21      26      31
+2       2       7       12      17      22      27      32
+3       3       8       13      18      23      28      33
+4       4       9       14      19      24      29      34
+5       5       10      15      20      25      30      35
+
+Hospital$id     Employee$id
+1       1
+2       2
+3       3
+4       4
+5       5
+1       6
+2       7
+3       8
+4       9
+5       10
+
+Doctor$id       Nurse$id
+6       1
+7       2
+8       3
+9       4
+10      5
+
+# Additional notes
+
+The first section just gives you all of the table names. The second section describes all of the tables. The third section shows you the input data that I used to show you that data is in the tables. If you are wondering what data is in each table, the SQL file has the insert statements. I compiled this with mysql by using the line 'mysql -u root -p (root for me) < database.sql'. I did not get any errors inserting my database with MAMP.
