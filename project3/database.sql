@@ -190,9 +190,9 @@ CREATE TABLE `SupervisedBy`(
   FOREIGN KEY     (`Nurse$id`) REFERENCES `Nurse` (`Employee$id`)
 );
 
--- SHOW TABLES;
+SHOW TABLES;
 
-/*DESCRIBE `Employee`;
+DESCRIBE `Employee`;
 DESCRIBE `Nurse`;
 DESCRIBE `Specialty`;
 DESCRIBE `Doctor`;
@@ -215,7 +215,7 @@ DESCRIBE `TimelinessOfCare`;
 DESCRIBE `EfficientUseOfMedicalImaging`;
 DESCRIBE `Rating`;
 DESCRIBE `WorksAt`;
-DESCRIBE `SupervisedBy`;*/
+DESCRIBE `SupervisedBy`;
 
 INSERT INTO `Employee` (`name`, `phoneNumber`, `dateOfBirth`)
 VALUES ('Eric', '0000000000', '1994-12-24'),
@@ -445,3 +445,37 @@ VALUES (31),
 (35);
 
 SELECT * FROM `EfficientUseOfMedicalImaging`;
+
+INSERT INTO `Rating` (`Hospital$id`, `Mortality$id`, `SafetyOfCare$id`,
+`Readmission$id`, `PatientExperience$id`, `EffectivenessOfCare$id`, `TimelinessOfCare$id`,
+`EfficientUseOfMedicalImaging$id`)
+VALUES (1, 1, 6, 11, 16, 21, 26, 31),
+(2, 2, 7, 12, 17, 22, 27, 32),
+(3, 3, 8, 13, 18, 23, 28, 33),
+(4, 4, 9, 14, 19, 24, 29, 34),
+(5, 5, 10, 15, 20, 25, 30, 35);
+
+SELECT * FROM `Rating`;
+
+INSERT INTO `WorksAt` (`Hospital$id`, `Employee$id`)
+VALUES (1, 1),
+(1, 6),
+(2, 2),
+(2, 7),
+(3, 3),
+(3, 8),
+(4, 4),
+(4, 9),
+(5, 5),
+(5, 10);
+
+SELECT * FROM `WorksAt`;
+
+INSERT INTO `SupervisedBy` (`Doctor$id`, `Nurse$id`)
+VALUES (6, 1),
+(7, 2),
+(8, 3),
+(9, 4),
+(10, 5);
+
+SELECT * FROM `SupervisedBy`;
