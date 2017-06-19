@@ -5,8 +5,8 @@ USE mydatabase;
 CREATE TABLE `Employee` (
   `id`          INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name`        VARCHAR(100) NOT NULL,
-  `phoneNumber` VARCHAR(12) NOT NULL,
-  `dateOfBirth` DATE NOT NULL,
+  `phoneNumber` VARCHAR(20) NOT NULL,
+  `dateofbirth` DATE NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -192,45 +192,6 @@ DESCRIBE `EfficientUseOfMedicalImaging`;
 DESCRIBE `Rating`;
 DESCRIBE `WorksAt`;
 DESCRIBE `SupervisedBy`;
-
-INSERT INTO `Employee` (`name`, `phoneNumber`, `dateOfBirth`)
-VALUES ('Eric', '0000000000', '1994-12-24'),
-('Tammy', '000-000-0001', '1994-12-25'),
-('Bob', '000-000-0002', '1994-12-26'),
-('Scott', '000-000-0003', '1994-12-27'),
-('Jimmy', '000-000-0004', '1994-12-28'),
-('Jose', '000-000-0005', '1994-12-29'),
-('Cat', '000-000-0006', '1994-12-30'),
-('Dog', '000-000-0007', '1994-12-31'),
-('Jack', '000-000-0008', '1995-1-1'),
-('Shandy', '000-000-0009', '1995-1-2');
-
-SELECT * FROM `Employee`;
-
-INSERT INTO `Nurse` (`Employee$id`)
-VALUES (1),
-(2),
-(3),
-(4),
-(5);
-
-SELECT * FROM `Nurse`;
-
-INSERT INTO `Specialty` (`description`)
-VALUES ('foot'),
-('head'),
-('heart'),
-('immune'),
-('nutritionist');
-
-SELECT * FROM `Specialty`;
-
-INSERT INTO `Doctor` (`Employee$id`, `Specialty$id`)
-VALUES (6, 1),
-(7, 2),
-(8, 3),
-(9, 4),
-(10, 5);
 
 SELECT * FROM `Doctor`;
 
