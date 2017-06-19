@@ -197,7 +197,7 @@ SELECT * FROM `Doctor`;
 
 INSERT INTO `HospitalType` (`name`)
 VALUES ('Acute Care Hospitals'),
-('Childs'),
+('Childrens'),
 ('Critical Access Hospitals');
 
 SELECT * FROM `HospitalType`;
@@ -208,7 +208,7 @@ VALUES ('Government - Federal'),
 ('Government - Local'),
 ('Government - State'),
 ('Physician'),
-('Propietary'),
+('Proprietary'),
 ('Tribal'),
 ('Voluntary non-profit - Church'),
 ('Voluntary non-profit - Other'),
