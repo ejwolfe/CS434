@@ -227,12 +227,12 @@ VALUES (1),
 SELECT * FROM `HospitalOverallRating`;
 
 INSERT INTO `Footnote` (`note`)
-VALUES ('Results are not avaliable for this reporting period'),
+VALUES ('Results are not available for this reporting period'),
 ('There are too few measures or measure groups reported to calculate a star rating or measure group score'),
-('Data are shown only for hospital that participate in the Inpatient quality Reporting (IQR) and Outpatient Quality Reporting (OQR) programs'),
+('Data are shown only for hospitals that participate in the Inpatient quality Reporting (IQR) and Outpatient Quality Reporting (OQR) programs'),
 ('This hospitals star rating only includes data reported on inpatient servies'),
 ('Data suppressed by CMS for one or more quarters'),
-('Not Avaliable');
+('Not Available');
 
 SELECT * FROM `Footnote`;
 
