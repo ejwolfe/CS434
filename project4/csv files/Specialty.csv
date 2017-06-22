@@ -1,0 +1,41 @@
+﻿id,specialty
+1,General Surgery
+2,Cardiothoracic Surgery
+3,Vascular Surgery
+4,Cosmetic and Reconstructive Surgery
+5,Colorectal Surgery
+6,Surgical Oncology
+7,Transplant Surgery
+8,Trauma Surgery
+9,Surgical Endocrinology
+10,Orthopedic Surgery
+11,Neurosurgery
+12,Urology
+13,ENT
+14,Ophthalmology
+15,Obstetrics & Gynecology
+16,Dermatology
+17,Neurology
+18,Pathology
+19,Radiology
+20,Anesthesiology
+21,Psychiatry
+22,Pediatrics
+23,Family Practice
+24,Radiation Oncology
+25,Physical Medicine and Rehab
+26,Emergency Medicine
+27,Psychologists/Counselors
+28,Podiatrists
+29,Optometrists
+30,Maternal-Fetal Medicine
+31,Reproductive Endocrinology
+32,Gynecologic Oncology
+33,Urogynecology
+34,Hand Surgeons
+35,Shoulder Surgeons
+36,Knee Surgeons
+37,Hip Surgeons
+38,Spine Surgeons
+39,Sports Medicine
+40,Orthopedic Oncology
