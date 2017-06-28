@@ -10,8 +10,8 @@ VALUES ('Holistic');
 Deletes any specialty that contains the word pathology in the description column.
 */
 DELETE
-FROM specialty
-where description like '%pathology%';
+FROM doctor
+WHERE employee$id = 100;
 
 /*
 Updates any employee name that is Jerrie Hutt with my name.
