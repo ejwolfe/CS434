@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS mydatabase;
+CREATE DATABASE mydatabase;
+USE mydatabase;
+
 -- phpMyAdmin SQL Dump
 -- version 4.4.15.5
 -- http://www.phpmyadmin.net
